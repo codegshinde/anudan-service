@@ -1,50 +1,55 @@
-# React + TypeScript + Vite
+# Anudan Service - Empowering Farmers and CSC Centers
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Anudan Service is designed to assist farmers and CSC (Common Service Center) owners in finding **VK (Verification Key) numbers**. It also enables seamless communication with farmers via **WhatsApp API** to provide updates and information regarding their grants and applications.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- **VK Number Finder**: Helps farmers and CSC owners quickly retrieve VK numbers.
+- **WhatsApp Messaging**: Send automated updates and information to farmers using WhatsApp API.
+- **User-Friendly**: Simple and intuitive interface for easy operation.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## Target Audience
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Farmers**: Receive updates about their applications and grants directly on WhatsApp.
+- **CSC Center Owners**: Help farmers retrieve VK numbers and send necessary updates.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Tech Stack
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Node.js**: Backend runtime
+- **Fastify**: Lightweight and fast web framework
+- **MongoDB**: For efficient data storage and retrieval
+- **Baileys**: For messaging farmers using whatsapp
+- **Mongoose**: ODM for MongoDB
+- **pnpm**: Dependency management
+
+---
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/anudan-service.git
+   cd anudan-service
+   
+2. Install dependencies:
+
+   ```bash
+   pnpm install
+   
+4. Create a .env file with the following configuration:
+
+   ```bash
+   MONGODB_URI=<your-mongodb-connection-string>
+   PORT=3000
+5. Start the application:
+
+   ```bash
+   pnpm start
+
