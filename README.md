@@ -35,7 +35,7 @@ Anudan Service is designed to assist farmers and CSC (Common Service Center) own
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/anudan-service.git
+   git clone https://github.com/codegshinde/anudan-service.git
    cd anudan-service
    
 2. Install dependencies:
